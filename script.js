@@ -1,10 +1,10 @@
-window.onscroll = () => {
+window.onscroll = function () {
     const btn = document.getElementById("scrollTopBtn");
-    btn.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
-};
-
-const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
 };
 
 function scrollToTop() {

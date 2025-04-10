@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 body, h1, h2, p {
     margin: 0;
     padding: 0;
@@ -49,13 +50,28 @@ article p {
     text-transform: uppercase;
 }
 
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background: #555;
+}
+
 @media (max-width: 600px) {
     #scrollTopBtn {
         padding: 8px 12px;
         font-size: 14px;
     }
-}
-
-#scrollTopBtn:hover {
-    background: #555;
 }
